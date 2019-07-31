@@ -1,0 +1,130 @@
+#dropFileForm {
+    margin: 16px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+#dropFileForm #fileLabel {
+    background-color: rgba(0, 255, 0, 0.5);
+    display: block;
+    padding: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+#dropFileForm #fileInput {
+    display: none;
+}
+
+#dropFileForm #fileLabel:after,
+#dropFileForm #fileLabel:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: -2;
+    border-radius: 8px 8px 0 0;
+}
+
+#dropFileForm #fileLabel:before {
+    z-index: -1;
+    background: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 5%,
+            black 5%,
+            black 10%
+    );
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#dropFileForm.fileHover #fileLabel:before {
+    opacity: 0.25;
+}
+
+#dropFileForm .uploadButton {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 8px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+
+.uploadButton:disabled {
+    background-color: #cccccc !important;
+}
+
+#dropFileForm.fileHover {
+    box-shadow: 0 10px 20px #ccc;
+    background-color: blue;
+}
+
+.filesDiv {
+    width: 100%;
+    height: max-content;
+}
+
+.card {
+    display: inline-block;
+    margin: 1%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 23%;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.cardId {
+    color: rgba(220, 20, 60, .1);
+    font-size: 18px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 20%;
+    transition: 0.5s;
+
+    text-align: right;
+}
+
+.cardId:hover {
+    color: rgba(220, 20, 60, .8);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cardName {
+    /*color: rgba(220, 20, 60, .5);*/
+    /*font-size: 11px;*/
+    width: 80%;
+    height: max-content;
+    display: inline-block;
+    padding: 0;
+    /*margin: 0;*/
+}
+
+.time {
+    color: rgba(134, 134, 134, 0.5);
+    font-size: 14px;
+    width: 100%;
+    text-align: right;
+}
+
+.latestUpload {
+    font-size: 24px;
+    text-align: center;
+}
